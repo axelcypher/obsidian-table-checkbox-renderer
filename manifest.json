@@ -1,10 +1,10 @@
 {
-    "id": "table-checkbox-renderer",
-    "name": "Table Checkbox Renderer",
-    "version": "1.0.2",
-    "description": "Interactive checkboxes for Markdown tables. Toggle checkboxes in Reading Mode to instantly update the Markdown file. Supports multiple checkboxes per cell and any table layout.",
-    "author": "Daniel Aguerrevere",
-    "authorUrl": "https://github.com/dannns",
+    "id": "axlc-table-checkbox-renderer-revamped",
+    "name": "Table Checkbox Renderer (Revamped)",
+    "version": "1.1.0",
     "minAppVersion": "1.8.0",
+    "description": "Interactive checkboxes for Markdown tables in Reading View and Live Preview. Toggling updates the Markdown file. Private revamp of Table Checkbox Renderer by Daniel Aguerrevere.",
+    "author": "axelcypher",
+    "authorUrl": "https://github.com/axelcypher",
     "isDesktopOnly": false
 }
