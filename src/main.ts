@@ -2,12 +2,17 @@ import { Plugin, MarkdownPostProcessorContext, TFile } from 'obsidian';
 import { getCheckboxCountsPerCell, getSourceLineNumber } from './markdown-helpers';
 import { getSourceLine } from './obsidian-helpers';
 import { renderCellCheckboxes } from './render-cell-checkboxes';
+import { livePreviewTableCheckboxes } from './live-preview';
 
 /**
  * Main plugin class for rendering interactive checkboxes in Markdown tables.
  */
 export default class TableCheckboxRendererPlugin extends Plugin {
   async onload() {
+    // Live Preview: clickable checkboxes inside rendered tables
+    this.registerEditorExtension(livePreviewTableCheckboxes);
+
+    // Reading view
     this.registerMarkdownPostProcessor(async (el: HTMLElement, ctx: MarkdownPostProcessorContext) => {
       el.querySelectorAll('table').forEach(table => {
         let dataRowIdx = 0;
